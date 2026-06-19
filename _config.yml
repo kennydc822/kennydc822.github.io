@@ -1,0 +1,8 @@
+title: "Kenny DC822"
+description: "Personal GitHub Pages site powered by Jekyll."
+baseurl: ""
+url: "https://kennydc822.github.io"
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-feed
+markdown: kramdown
