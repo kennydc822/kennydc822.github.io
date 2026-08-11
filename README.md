@@ -1,12 +1,19 @@
-# KennyDC822 GitHub Pages Site
+# 麻將紅中變 Website
 
-This repository contains a simple Jekyll website using the `jekyll-theme-cayman` theme.
+Official landing page for **麻將紅中變 / Mahjong Red Dragon**. The site links to
+the Android game on Google Play and its published
+[privacy policy](https://kennydc822.github.io/mahjong-red-dragon-privacy/).
 
-## Run locally
+## Local preview
 
 ```bash
-bundle install
-bundle exec jekyll serve
+npm run dev
 ```
 
-Then open `http://127.0.0.1:4000` in your browser.
+Then open `http://127.0.0.1:4173`.
+
+## Production build
+
+```bash
+npm run build
+```

@@ -1,8 +1,15 @@
-title: "Kenny DC822"
-description: "Personal GitHub Pages site powered by Jekyll."
+title: "麻將紅中變"
+description: "紅中當百搭，只碰、只槓、不吃的休閒麻將玩法。"
 baseurl: ""
 url: "https://kennydc822.github.io"
 theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 markdown: kramdown
+exclude:
+  - node_modules
+  - dist
+  - scripts
+  - package.json
+  - package-lock.json
+  - .openai
