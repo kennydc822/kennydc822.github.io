@@ -851,7 +851,7 @@ a {
   transform: scale(1.035);
 }
 
-.mode-image > span {
+.mode-image > .mode-label {
   position: absolute;
   z-index: 2;
   right: 20px;
@@ -862,6 +862,24 @@ a {
   font-family: "Courier New", monospace;
   font-size: 9px;
   letter-spacing: 0.16em;
+}
+
+.coming-soon-tag {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  left: 20px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 248, 233, 0.48);
+  border-radius: 999px;
+  background: rgba(132, 26, 24, 0.92);
+  box-shadow: 0 8px 24px rgba(15, 8, 5, 0.28);
+  color: var(--paper-bright);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  backdrop-filter: blur(8px);
 }
 
 .mode-copy {
