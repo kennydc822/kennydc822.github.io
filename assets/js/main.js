@@ -29,3 +29,38 @@ if ("IntersectionObserver" in window) {
 document.querySelectorAll("[data-year]").forEach((element) => {
   element.textContent = String(new Date().getFullYear());
 });
+
+const themeImage = document.querySelector("#theme-preview-image");
+const themeCaption = document.querySelector("#theme-preview-caption");
+const themeChoices = document.querySelectorAll("[data-theme]");
+const themeNames = {
+  original: "原版風格",
+  classic: "經典茶樓",
+  midnight: "夜海青瓷",
+  jade: "玉石晨光",
+};
+
+// Keep the current preview visible until the next screenshot has loaded.
+let latestThemeRequest = 0;
+themeChoices.forEach((button) => {
+  button.addEventListener("click", () => {
+    const theme = button.dataset.theme;
+    if (!themeImage || !themeCaption || !themeNames[theme]) return;
+    const request = ++latestThemeRequest;
+    const preview = new Image();
+    preview.onload = () => {
+      if (request !== latestThemeRequest) return;
+      themeImage.src = preview.src;
+      themeImage.alt = `${themeNames[theme]}：遊戲外觀設定實機畫面`;
+      themeCaption.textContent = `${themeNames[theme]} · 外觀設定`;
+      themeChoices.forEach((choice) => {
+        choice.setAttribute("aria-pressed", String(choice === button));
+      });
+    };
+    preview.onerror = () => {
+      if (request !== latestThemeRequest) return;
+      themeCaption.textContent = "暫時未能載入此主題畫面，請再試一次。";
+    };
+    preview.src = `assets/images/theme-${theme}.jpg`;
+  });
+});

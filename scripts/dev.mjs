@@ -1,6 +1,6 @@
 import { createReadStream, existsSync, statSync } from "node:fs";
 import { createServer } from "node:http";
-import { extname, join, normalize, resolve } from "node:path";
+import { extname, normalize, resolve, sep } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
 const port = Number(process.env.PORT || 4173);
@@ -8,6 +8,7 @@ const port = Number(process.env.PORT || 4173);
 const contentTypes = {
   ".css": "text/css; charset=utf-8",
   ".html": "text/html; charset=utf-8",
+  ".jpg": "image/jpeg",
   ".js": "text/javascript; charset=utf-8",
   ".png": "image/png",
   ".txt": "text/plain; charset=utf-8",
@@ -15,11 +16,20 @@ const contentTypes = {
 };
 
 const server = createServer((request, response) => {
-  const requestPath = decodeURIComponent(new URL(request.url ?? "/", "http://localhost").pathname);
+  let requestPath;
+  try {
+    requestPath = decodeURIComponent(new URL(request.url ?? "/", "http://localhost").pathname);
+  } catch {
+    response.writeHead(400).end("Bad request");
+    return;
+  }
   const relativePath = requestPath === "/" ? "index.html" : requestPath.replace(/^\/+/, "");
   const filePath = resolve(root, normalize(relativePath));
 
-  if (!filePath.startsWith(`${root}\\`) && filePath !== join(root, "index.html")) {
+  const publicPath = relativePath === "index.html" || relativePath === "app-ads.txt"
+    || relativePath.startsWith("assets/");
+  if (!publicPath || relativePath.split(/[\\/]/).some((part) => part.startsWith("."))
+    || !filePath.startsWith(`${root}${sep}`)) {
     response.writeHead(403).end("Forbidden");
     return;
   }

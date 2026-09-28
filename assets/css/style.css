@@ -1424,3 +1424,61 @@ a {
     transform: none;
   }
 }
+
+/* Expanded game modes and authentic in-game previews. */
+.hero h1, .section h2, .download h2 { line-height: 1.14; letter-spacing: -.035em; }
+.hero-lede, .section-intro > p:last-child, .modes-heading > p,
+.gallery-heading > p, .rule-feature div:last-child > p:last-child,
+.rule-card small { font-size: 1rem; }
+.eyebrow, .feature-ribbon small, .hero-meta span, .header-cta,
+.site-nav, .text-button, .privacy-button, .footer-links,
+.gallery-track figcaption, .swipe-hint { font-size: .875rem; }
+.rule-kicker, .rule-card > p, .copyright, .site-footer > div:first-child > p,
+.play-button small, .hero-screen figcaption { font-size: .75rem; }
+.rules-layout { grid-template-columns: 1.3fr .85fr .85fr; }
+.rule-feature { grid-template-columns: 120px 1fr; gap: 28px; padding: 38px 28px; }
+.rule-tile { width: 112px; height: 152px; font-size: 72px; }
+.rule-card { padding: 38px 28px; }
+.variant-grid { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; max-width: 1200px; margin: auto; background: var(--line-dark); border: 1px solid var(--line-dark); }
+.variant-card { padding: clamp(24px, 3.5vw, 48px); background: #21160f; }
+.card-index { color: var(--gold); font-size: .875rem; letter-spacing: .05em; margin: 0 0 18px; }
+.variant-card h3, .custom-feature h3, .practice-copy h3 { margin: 0; font-family: var(--display); font-size: clamp(26px, 2.4vw, 36px); line-height: 1.4; }
+.variant-card > p:not(.card-index), .custom-feature p:not(.eyebrow) { color: #c6b9a6; font-size: 1rem; }
+.variant-detail { display: block; color: var(--gold); font-size: .875rem; margin-top: 26px; }
+.custom-feature { position: relative; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center; max-width: 1200px; margin: 60px auto 0; }
+.custom-feature img { width: 100%; border: 1px solid var(--line-dark); }
+.custom-feature .custom-note { font-size: .875rem; }
+.online-note { position: relative; max-width: 1200px; margin: 48px auto 0; padding-top: 24px; border-top: 1px solid var(--line-dark); color: #c6b9a6; font-size: .875rem; }
+.online-note strong { color: var(--gold); margin-right: 18px; }
+.practice { background: var(--paper); color: var(--ink); }
+.practice-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 50px; align-items: center; max-width: 1200px; margin: auto; }
+.practice-copy .card-index { color: var(--red-deep); }
+.practice-copy > p:not(.card-index) { color: #665743; }
+.practice-divider { height: 1px; margin: 32px 0; background: var(--line-light); }
+.practice-screen { margin: 0; }
+.practice-screen img { border: 1px solid var(--line-light); box-shadow: 0 22px 40px #492d1a29; }
+.practice-screen figcaption { color: #665743; font-size: .875rem; margin-top: 16px; }
+.themes { background: #12251f; }
+.themes .modes-heading > p { color: #c6cec4; }
+.theme-choices { display: flex; flex-wrap: wrap; gap: 12px; max-width: 1200px; margin: 0 auto 28px; }
+.theme-choice { display: inline-flex; align-items: center; gap: 10px; padding: 14px 20px; border: 1px solid #7f8b79; border-radius: 4px; background: transparent; color: var(--paper); font: inherit; cursor: pointer; }
+.theme-choice:hover { border-color: var(--gold); }
+.theme-choice[aria-pressed="true"] { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.swatch { width: 18px; height: 18px; border-radius: 50%; border: 1px solid #a38f6e; }
+.swatch.original { background: #684729; }.swatch.classic { background: #963e29; }.swatch.midnight { background: #243c55; }.swatch.jade { background: #d8cebc; }
+.theme-preview { max-width: 1200px; margin: auto; }
+.theme-preview img { width: 100%; border: 1px solid var(--line-dark); }
+.theme-preview figcaption { margin-top: 16px; font-size: .875rem; color: #c6cec4; }
+@media (max-width: 1120px) {
+  .rules-layout { grid-template-columns: 1fr 1fr; }
+  .custom-feature, .practice-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .rules-layout, .variant-grid { grid-template-columns: 1fr; }
+  .rule-feature { grid-template-columns: 80px 1fr; padding: 32px 20px; gap: 18px; }
+  .rule-tile { width: 76px; height: 106px; font-size: 50px; }
+  .theme-choice { flex: 1 1 calc(50% - 12px); justify-content: center; padding: 12px 8px; font-size: .875rem; }
+  .online-note strong { display: block; margin-bottom: 8px; }
+  .hero-meta li { padding: 0 12px; }
+  .hero-meta span { font-size: .75rem; }
+}
