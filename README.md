@@ -20,9 +20,11 @@ npm run build
 
 ## Content
 
-The landing page covers five formal singleplayer modes, Custom Playground, Quiz Dojo, three AI difficulties, per-mode ratings, and four appearance themes. Online play remains labelled coming soon. Feature availability was confirmed by the owner on 2026-09-28; no app release number is inferred from the development project.
+The landing page covers five formal singleplayer modes, Custom Playground, Quiz Dojo, three AI difficulties, per-mode ratings, and four appearance themes. Online play remains labelled coming soon. The previous feature availability confirmation was on 2026-09-28.
 
-Screenshot provenance is recorded in [SCREENSHOTS.md](SCREENSHOTS.md). Theme previews use native buttons with selected-state announcements and preserve the current image if loading fails.
+The 2026-10-05 refresh adds a clearly labelled development preview for public-information danger/safety hints, Taiwan declared-ready waits, and the Hong Kong hand assistant. It updates the icon from the game's October 5 launcher artwork, replaces theme settings captures with gameplay environments, and refreshes Custom, Quiz and statistics images. No published app version is inferred from the development project; the page directs players to their installed Google Play version for feature availability.
+
+Screenshot and artwork provenance is recorded in [SCREENSHOTS.md](SCREENSHOTS.md). Theme previews use native buttons with selected-state announcements and preserve the current image if loading fails. Newly referenced images use dated filenames, and CSS/JS use a dated query, so cached September assets do not hide the refresh.
 
 ## Publishing
 

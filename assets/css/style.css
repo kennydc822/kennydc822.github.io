@@ -1482,3 +1482,66 @@ a {
   .hero-meta li { padding: 0 12px; }
   .hero-meta span { font-size: .75rem; }
 }
+
+/* October feature previews use uncropped game captures. */
+.latest {
+  background: linear-gradient(145deg, #29170f, #170d08 70%);
+}
+.latest .modes-heading > p { color: #c6b9a6; }
+.latest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: auto;
+}
+.latest-card {
+  overflow: hidden;
+  border: 1px solid var(--line-dark);
+  background: rgba(255, 248, 233, 0.035);
+}
+.latest-card > a { position: relative; display: block; }
+.latest-card img { width: 100%; }
+.image-enlarge {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background: rgba(23, 13, 8, 0.9);
+  color: var(--paper-bright);
+  font-size: .75rem;
+}
+.latest-copy { padding: 28px; }
+.latest-copy h3, .assist-feature h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(25px, 2.4vw, 36px);
+  line-height: 1.4;
+}
+.latest-copy > p:not(.card-index), .assist-feature p:not(.eyebrow) {
+  color: #c6b9a6;
+}
+.latest .feature-note { font-size: .875rem; color: var(--gold); }
+.hint-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 22px; }
+.hint-legend span { display: inline-flex; align-items: center; gap: 7px; font-size: .75rem; }
+.hint-legend i { font-style: normal; font-weight: 800; font-size: 1rem; }
+.hint-danger { color: #f48775; }
+.hint-safe { color: #6fd29b; }
+.hint-riichi { color: #81b9ff; }
+.assist-feature {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 56px auto 0;
+}
+.assist-feature img { width: 100%; border: 1px solid var(--line-dark); }
+@media (max-width: 1120px) {
+  .assist-feature { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 760px) {
+  .latest-grid { grid-template-columns: 1fr; }
+  .latest-copy { padding: 24px 20px; }
+}

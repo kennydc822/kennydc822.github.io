@@ -51,8 +51,8 @@ themeChoices.forEach((button) => {
     preview.onload = () => {
       if (request !== latestThemeRequest) return;
       themeImage.src = preview.src;
-      themeImage.alt = `${themeNames[theme]}：遊戲外觀設定實機畫面`;
-      themeCaption.textContent = `${themeNames[theme]} · 外觀設定`;
+      themeImage.alt = `${themeNames[theme]}：牌桌、牌背及環境的遊戲畫面`;
+      themeCaption.textContent = `${themeNames[theme]} · 牌桌與環境預覽`;
       themeChoices.forEach((choice) => {
         choice.setAttribute("aria-pressed", String(choice === button));
       });
@@ -61,6 +61,6 @@ themeChoices.forEach((button) => {
       if (request !== latestThemeRequest) return;
       themeCaption.textContent = "暫時未能載入此主題畫面，請再試一次。";
     };
-    preview.src = `assets/images/theme-${theme}.jpg`;
+    preview.src = `assets/images/theme-${theme}-20261005.jpg`;
   });
 });
