@@ -1,5 +1,27 @@
 # Website screenshot and artwork sources
 
+## October 5 alignment with the current game (`20261005r2`)
+
+Current Hong Kong UI captures come from `Marketing/GooglePlay/2026-10-05/zh-HK/`, generated from `develop-1.4.0` commit `68566633`. Each is exported as an uncropped 1920×1080 JPEG at quality 87 with mozjpeg. The source set is prepared for a future Google Play update; it has not established availability in a published version. Screens 01–03 are prepared gameplay states, and 05 is an in-memory custom rule example. The website retains its development-preview availability note.
+
+| Website asset (`assets/images/`) | Source filename in that directory |
+| --- | --- |
+| `hand-assist-20261005r2.jpg` | `01-hong-kong-hand-assistance.png` |
+| `taiwan-ready-20261005r2.jpg` | `02-taiwan-ready-preview.png` |
+| `japanese-safety-20261005r2.jpg` | `03-japanese-safe-tiles.png` |
+| `game-modes-20261005r2.jpg` | `04-game-modes.png` |
+| `custom-rules-20261005r2.jpg` | `05-custom-rules.png` |
+| `quiz-dojo-20261005r2.jpg` | `06-quiz-dojo.png` |
+| `appearance-settings-20261005r2.jpg` | `07-appearance-themes.png` |
+| `statistics-20261005r2.jpg` | `08-statistics.png` |
+
+- Mode names and rule copy follow `Assets/Resources/Localization/locale.csv`, the regional overrides in `zh-HK.csv`, and `CONTEXT.md`. Hong Kong is three-fan minimum, ten-fan cap; the Japanese mode is the game's Red Wild hybrid.
+- `game-tile-base-20261005r2.png` is the exact sprite rectangle (118×175 at Unity x=2, y=2) from `Assets/_Game/Textures/Tiles3D/tile2d_face.png`, referenced by `TileDefinitionDatabase.asset` (GUID `4fbe1f131f7e9a44db2161d1a81856fd`).
+- `game-dragon_red-20261005r2.png`, `game-dragon_green-20261005r2.png`, `game-bamboo_3-20261005r2.png`, and `game-dots_1-20261005r2.png` are byte copies of the corresponding production face sprites in `Assets/_Game/Textures/Tiles/`. CSS follows `UITilePrefab.prefab`: 90×135 tile, 82×125 contained face, offset up one pixel. No font glyph or CSS gradient substitutes for the tile artwork.
+- `game-wordmark-20261005r2.webp` is the original `Assets/_Game/Textures/UI/Wordmark/wordmark-zh-hant.png`, resized to 768×512 at WebP quality 95. It retains the source paper background and brush strokes.
+- `og-gamebrand-20261005r2.png` is a byte copy of the prepared game banner `Marketing/GooglePlay/2026-10-05/banner/feature-graphic-v2-1024x500.png`. This is existing promotional artwork, not a screenshot.
+- The October 5 app icon and four gameplay theme captures below remain in use. Older feature captures are retained for history but are no longer referenced by the page.
+
 ## October 5 website refresh
 
 Sources are from the local Mahjong Unity project. Captures are converted to JPEG at quality 85 with mozjpeg, preserving their original dimensions without cropping. These are Editor-rendered gameplay/UI previews, including prepared presentation fixtures; they do not certify a published app release or device performance. The website labels recent functionality as a development preview.

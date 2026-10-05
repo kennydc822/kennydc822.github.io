@@ -96,6 +96,7 @@ a {
   min-height: 84px;
   padding: 14px clamp(20px, 4vw, 72px);
   border-bottom: 1px solid transparent;
+  background: rgba(23, 13, 8, 0.94);
   transition: background-color 240ms ease, border-color 240ms ease, min-height 240ms ease;
 }
 
@@ -203,10 +204,10 @@ a {
   min-height: 920px;
   padding: 150px clamp(24px, 6vw, 110px) 110px;
   isolation: isolate;
+  color: var(--ink);
   background:
-    radial-gradient(circle at 77% 46%, rgba(28, 98, 75, 0.25), transparent 28%),
-    radial-gradient(circle at 50% -10%, rgba(200, 58, 47, 0.1), transparent 32%),
-    linear-gradient(135deg, #21120c 0%, #130a07 56%, #090604 100%);
+    radial-gradient(circle at 77% 46%, rgba(28, 98, 75, 0.13), transparent 34%),
+    linear-gradient(135deg, #f8f4e8 0%, #eee5d2 100%);
 }
 
 .hero::before {
@@ -229,7 +230,7 @@ a {
   height: 110px;
   content: "";
   pointer-events: none;
-  background: linear-gradient(to bottom, transparent, rgba(10, 6, 4, 0.45));
+  background: linear-gradient(to bottom, transparent, rgba(136, 113, 73, 0.08));
 }
 
 .hero-glow {
@@ -258,6 +259,15 @@ a {
   position: relative;
   z-index: 3;
   max-width: 700px;
+}
+
+.hero-copy .eyebrow {
+  color: var(--jade-deep);
+}
+
+.game-wordmark {
+  width: min(100%, 480px);
+  mix-blend-mode: multiply;
 }
 
 .eyebrow {
@@ -310,7 +320,7 @@ a {
 .hero-lede {
   max-width: 590px;
   margin: 34px 0 0;
-  color: rgba(244, 234, 215, 0.68);
+  color: #665743;
   font-size: clamp(15px, 1.2vw, 18px);
   line-height: 1.9;
 }
@@ -382,6 +392,22 @@ a {
   color: var(--gold);
 }
 
+.hero .text-button {
+  border-color: #9e8b6d;
+  color: var(--jade-deep);
+}
+
+.hero .play-button {
+  border-color: var(--jade-deep);
+  background: var(--jade-deep);
+  color: var(--paper-bright);
+}
+
+.hero .play-button:hover {
+  border-color: var(--jade);
+  background: var(--jade);
+}
+
 .hero-meta {
   display: flex;
   gap: 0;
@@ -394,7 +420,7 @@ a {
   display: grid;
   min-width: 126px;
   padding: 0 26px;
-  border-left: 1px solid var(--line-dark);
+  border-left: 1px solid var(--line-light);
 }
 
 .hero-meta li:first-child {
@@ -403,13 +429,13 @@ a {
 }
 
 .hero-meta strong {
-  color: var(--paper-bright);
+  color: var(--jade-deep);
   font-family: var(--display);
   font-size: 22px;
 }
 
 .hero-meta span {
-  color: var(--muted);
+  color: #665743;
   font-size: 10px;
   letter-spacing: 0.08em;
 }
@@ -441,9 +467,9 @@ a {
   padding: 9px;
   transform: rotateY(-7deg) rotateZ(2deg);
   transform-style: preserve-3d;
-  border: 1px solid rgba(244, 234, 215, 0.28);
+  border: 1px solid #a7926e;
   border-radius: 10px;
-  background: rgba(255, 248, 233, 0.08);
+  background: var(--paper-bright);
   box-shadow: var(--shadow);
 }
 
@@ -464,11 +490,11 @@ a {
 .hero-screen figcaption {
   position: absolute;
   top: -38px;
-  right: 0;
+  left: 0;
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--gold);
+  color: #76572c;
   font-size: 9px;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -493,21 +519,37 @@ a {
   animation: hover-icon 7s ease-in-out infinite;
 }
 
+.game-tile {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  aspect-ratio: 2 / 3;
+  filter: drop-shadow(0 12px 18px rgba(44, 26, 15, 0.22));
+}
+
+.game-tile img {
+  position: absolute;
+  max-width: none;
+}
+
+.game-tile-base {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.game-tile-face {
+  top: 2.963%;
+  left: 4.444%;
+  width: 91.111%;
+  height: 92.593%;
+  object-fit: contain;
+}
+
 .floating-tile {
   position: absolute;
   z-index: 5;
-  display: grid;
-  place-items: center;
   width: 70px;
-  height: 94px;
-  border: 2px solid #d9c99f;
-  border-radius: 9px;
-  background: linear-gradient(145deg, #fff9e8, #e0cfaa);
-  color: var(--red);
-  font-family: var(--display);
-  font-size: 40px;
-  font-weight: 800;
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.38), inset -6px -8px 10px rgba(91, 61, 26, 0.12);
 }
 
 .tile-one {
@@ -520,7 +562,6 @@ a {
   bottom: 3%;
   left: 3%;
   transform: rotate(-12deg);
-  color: var(--jade);
 }
 
 .stage-note {
@@ -528,7 +569,7 @@ a {
   bottom: 3%;
   left: 17%;
   margin: 0;
-  color: rgba(244, 234, 215, 0.44);
+  color: #857255;
   font-family: "Courier New", monospace;
   font-size: 9px;
   line-height: 1.4;
@@ -580,19 +621,7 @@ a {
 }
 
 .ribbon-mark {
-  display: grid;
-  flex: 0 0 auto;
-  place-items: center;
-  width: 46px;
-  height: 58px;
-  border: 1px solid rgba(23, 13, 8, 0.18);
-  border-radius: 5px;
-  background: var(--paper-bright);
-  color: var(--red);
-  font-family: var(--display);
-  font-size: 24px;
-  font-weight: 800;
-  box-shadow: 0 8px 16px rgba(44, 26, 15, 0.1);
+  width: 40px;
 }
 
 .feature-ribbon p {
@@ -687,18 +716,7 @@ a {
 }
 
 .rule-tile {
-  display: grid;
-  place-items: center;
   width: 180px;
-  height: 234px;
-  border: 3px solid #d8c49c;
-  border-radius: 15px;
-  background: linear-gradient(145deg, #fffdf2, #dfcda8);
-  color: var(--red);
-  font-family: var(--display);
-  font-size: 102px;
-  font-weight: 800;
-  box-shadow: 0 22px 30px rgba(76, 49, 27, 0.18), inset -8px -10px 15px rgba(91, 61, 26, 0.11);
   transform: rotate(-5deg);
 }
 
@@ -781,18 +799,6 @@ a {
   background:
     radial-gradient(circle at 75% 30%, rgba(28, 98, 75, 0.24), transparent 28%),
     linear-gradient(145deg, #20110b, #0d0806 70%);
-}
-
-.modes::before {
-  position: absolute;
-  top: 5%;
-  right: -8%;
-  content: "中";
-  color: rgba(244, 234, 215, 0.025);
-  font-family: var(--display);
-  font-size: 44vw;
-  font-weight: 800;
-  line-height: 1;
 }
 
 .modes-heading,
@@ -1035,11 +1041,8 @@ a {
   position: absolute;
   top: 50%;
   right: 2%;
-  color: rgba(255, 248, 233, 0.045);
-  font-family: var(--display);
-  font-size: min(56vw, 760px);
-  font-weight: 800;
-  line-height: 1;
+  width: min(56vw, 600px);
+  opacity: 0.06;
   transform: translateY(-50%);
 }
 
@@ -1272,9 +1275,6 @@ a {
 
   .floating-tile {
     width: 46px;
-    height: 62px;
-    border-radius: 6px;
-    font-size: 27px;
   }
 
   .tile-one {
@@ -1339,8 +1339,6 @@ a {
 
   .rule-tile {
     width: 96px;
-    height: 128px;
-    font-size: 58px;
   }
 
   .rule-feature h3 {
@@ -1437,14 +1435,19 @@ a {
 .play-button small, .hero-screen figcaption { font-size: .75rem; }
 .rules-layout { grid-template-columns: 1.3fr .85fr .85fr; }
 .rule-feature { grid-template-columns: 120px 1fr; gap: 28px; padding: 38px 28px; }
-.rule-tile { width: 112px; height: 152px; font-size: 72px; }
+.rule-tile { width: 112px; }
 .rule-card { padding: 38px 28px; }
 .variant-grid { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; max-width: 1200px; margin: auto; background: var(--line-dark); border: 1px solid var(--line-dark); }
 .variant-card { padding: clamp(24px, 3.5vw, 48px); background: #21160f; }
+.variant-card:last-child { grid-column: 1 / -1; }
+.variant-card:last-child > p:not(.card-index) { max-width: 760px; }
 .card-index { color: var(--gold); font-size: .875rem; letter-spacing: .05em; margin: 0 0 18px; }
 .variant-card h3, .custom-feature h3, .practice-copy h3 { margin: 0; font-family: var(--display); font-size: clamp(26px, 2.4vw, 36px); line-height: 1.4; }
 .variant-card > p:not(.card-index), .custom-feature p:not(.eyebrow) { color: #c6b9a6; font-size: 1rem; }
 .variant-detail { display: block; color: var(--gold); font-size: .875rem; margin-top: 26px; }
+.mode-picker-screen { position: relative; max-width: 1200px; margin: 0 auto 40px; }
+.mode-picker-screen img { width: 100%; border: 1px solid var(--line-dark); }
+.mode-picker-screen figcaption { margin-top: 14px; color: #c6b9a6; font-size: .875rem; }
 .custom-feature { position: relative; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center; max-width: 1200px; margin: 60px auto 0; }
 .custom-feature img { width: 100%; border: 1px solid var(--line-dark); }
 .custom-feature .custom-note { font-size: .875rem; }
@@ -1476,7 +1479,7 @@ a {
 @media (max-width: 760px) {
   .rules-layout, .variant-grid { grid-template-columns: 1fr; }
   .rule-feature { grid-template-columns: 80px 1fr; padding: 32px 20px; gap: 18px; }
-  .rule-tile { width: 76px; height: 106px; font-size: 50px; }
+  .rule-tile { width: 76px; }
   .theme-choice { flex: 1 1 calc(50% - 12px); justify-content: center; padding: 12px 8px; font-size: .875rem; }
   .online-note strong { display: block; margin-bottom: 8px; }
   .hero-meta li { padding: 0 12px; }
