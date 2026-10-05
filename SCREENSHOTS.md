@@ -1,6 +1,23 @@
 # Website screenshot and artwork sources
 
-## Current content correction (`20261005r3`)
+## Alternating appearance themes (`20261005r4`)
+
+The twelve gameplay/UI image placements alternate across all four appearance packs, with three placements per pack on initial load. All added captures are native 1920×1080 Hong Kong Traditional Chinese frames from `Marketing/GooglePlay/2026-10-05/themes/`, verified against the SHA-256 records in `themes/manifest.json` before uncropped JPEG exports at quality 87 with mozjpeg. Their development-version and prepared-state limits remain the same as the October set below. No removed Hong Kong hand-assistance image is included.
+
+| Website asset (`assets/images/`) | Source relative to `Marketing/GooglePlay/2026-10-05/themes/` | Placement |
+| --- | --- | --- |
+| `taiwan-ready-original-20261005r4.jpg` | `original/zh-HK/02-taiwan-ready-preview.png` | Hero; Original theme comparison |
+| `game-modes-classic-20261005r4.jpg` | `classic-teahouse/zh-HK/04-game-modes.png` | Main mode picker |
+| `custom-rules-midnight-20261005r4.jpg` | `midnight-porcelain/zh-HK/05-custom-rules.png` | Custom Playground |
+| `japanese-safety-original-20261005r4.jpg` | `original/zh-HK/03-japanese-safe-tiles.png` | Safety feature card |
+| `taiwan-ready-classic-20261005r4.jpg` | `classic-teahouse/zh-HK/02-taiwan-ready-preview.png` | Taiwan feature card; Classic comparison |
+| `taiwan-ready-midnight-20261005r4.jpg` | `midnight-porcelain/zh-HK/02-taiwan-ready-preview.png` | Default theme comparison; Taiwan gallery entry |
+| `japanese-safety-classic-20261005r4.jpg` | `classic-teahouse/zh-HK/03-japanese-safe-tiles.png` | Japanese gallery entry |
+| `statistics-original-20261005r4.jpg` | `original/zh-HK/08-statistics.png` | Statistics gallery entry |
+
+The retained `quiz-dojo-20261005r2.jpg`, `game-modes-20261005r2.jpg`, and `appearance-settings-20261005r2.jpg` show Jade Morning in Quiz and the gallery. `taiwan-ready-20261005r2.jpg` supplies the Jade comparison. Captions and alternative text identify the actual pack. Earlier game-theme captures remain in history but no longer supply the comparison.
+
+## Content correction (`20261005r3`)
 
 The game owner confirmed that Hong Kong hand assistance is no longer present. All descriptions of that feature and both `hand-assist-20261005*.jpg` exports have been removed. The hero now uses `taiwan-ready-20261005r2.jpg`; the first gallery image uses `game-modes-20261005r2.jpg`. Source records below describe retained assets.
 

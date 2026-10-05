@@ -39,6 +39,12 @@ const themeNames = {
   midnight: "夜海青瓷",
   jade: "玉石晨光",
 };
+const themeSources = {
+  original: "assets/images/taiwan-ready-original-20261005r4.jpg",
+  classic: "assets/images/taiwan-ready-classic-20261005r4.jpg",
+  midnight: "assets/images/taiwan-ready-midnight-20261005r4.jpg",
+  jade: "assets/images/taiwan-ready-20261005r2.jpg",
+};
 
 // Keep the current preview visible until the next screenshot has loaded.
 let latestThemeRequest = 0;
@@ -51,6 +57,7 @@ themeChoices.forEach((button) => {
     preview.onload = () => {
       if (request !== latestThemeRequest) return;
       themeImage.src = preview.src;
+      themeImage.dataset.captureTheme = theme;
       themeImage.alt = `${themeNames[theme]}：牌桌、牌背及環境的遊戲畫面`;
       themeCaption.textContent = `${themeNames[theme]} · 牌桌與環境預覽`;
       themeChoices.forEach((choice) => {
@@ -61,6 +68,6 @@ themeChoices.forEach((button) => {
       if (request !== latestThemeRequest) return;
       themeCaption.textContent = "暫時未能載入此主題畫面，請再試一次。";
     };
-    preview.src = `assets/images/theme-${theme}-20261005.jpg`;
+    preview.src = themeSources[theme];
   });
 });

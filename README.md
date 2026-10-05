@@ -30,6 +30,8 @@ Screenshot and artwork provenance is recorded in [SCREENSHOTS.md](SCREENSHOTS.md
 
 The Hong Kong hand-assistant feature is absent from the current game, as confirmed by the owner. Its section, copy, screenshots and obsolete styling have been removed. The hero uses the Taiwan ready-preview capture and the gallery starts with the mode picker.
 
+Screenshots alternate between all four game themes. On initial load, each theme appears three times across the twelve gameplay/UI image placements. The hero uses Original, the main mode picker Classic Teahouse, Custom Midnight Porcelain, and Quiz Jade Morning. Feature cards and gallery entries use different themes for the same feature. The theme comparison uses the latest Taiwan capture for each pack and starts with Midnight Porcelain; selected-state announcements and load-failure fallback remain available.
+
 ## Publishing
 
 The public website is served by GitHub Pages from the root of `main`. The existing Sites configuration is retained; this update does not change hosting providers.
