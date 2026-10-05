@@ -1,12 +1,15 @@
 # Website screenshot and artwork sources
 
+## Current content correction (`20261005r3`)
+
+The game owner confirmed that Hong Kong hand assistance is no longer present. All descriptions of that feature and both `hand-assist-20261005*.jpg` exports have been removed. The hero now uses `taiwan-ready-20261005r2.jpg`; the first gallery image uses `game-modes-20261005r2.jpg`. Source records below describe retained assets.
+
 ## October 5 alignment with the current game (`20261005r2`)
 
 Current Hong Kong UI captures come from `Marketing/GooglePlay/2026-10-05/zh-HK/`, generated from `develop-1.4.0` commit `68566633`. Each is exported as an uncropped 1920×1080 JPEG at quality 87 with mozjpeg. The source set is prepared for a future Google Play update; it has not established availability in a published version. Screens 01–03 are prepared gameplay states, and 05 is an in-memory custom rule example. The website retains its development-preview availability note.
 
 | Website asset (`assets/images/`) | Source filename in that directory |
 | --- | --- |
-| `hand-assist-20261005r2.jpg` | `01-hong-kong-hand-assistance.png` |
 | `taiwan-ready-20261005r2.jpg` | `02-taiwan-ready-preview.png` |
 | `japanese-safety-20261005r2.jpg` | `03-japanese-safe-tiles.png` |
 | `game-modes-20261005r2.jpg` | `04-game-modes.png` |
@@ -34,12 +37,11 @@ Sources are from the local Mahjong Unity project. Captures are converted to JPEG
 | `theme-jade-20261005.jpg` | `Logs/VisualQA/GameplayThemes-Applied-Jade/Jade_01_GameplayReady.png` |
 | `japanese-safety-20261005.jpg` | `Logs/VisualQA/2026-10-01-JapaneseSafety-c624/JapaneseSafe/JapaneseSafe_01_JapaneseSafeHints.png` |
 | `taiwan-ready-20261005.jpg` | `Logs/VisualQA/TaiwanReadyWaits-2026-10-01/Persistent1080/Persistent1080_01_TaiwanReadyWaits.png` |
-| `hand-assist-20261005.jpg` | `Logs/UIAudit-20260923/Assist/Assist_01_HandAssistTargetPopup.png` |
 | `statistics-20261005.jpg` | `Logs/VisualQA/StatisticsText-2026-09-30/jade-hongkong/jade-hongkong_01_StatisticsOpen.png` |
 | `custom-rules-20261005.jpg` | `Logs/VisualQA/UnifiedText-2026-09-30/jade-custom/jade-custom_01_CustomRuleEditor.png` |
 | `quiz-dojo-20261005.jpg` | `Logs/VisualQA/UnifiedText-2026-09-30/jade-quiz-question/jade-quiz-question_01_QuizQuestion.png` |
 
-The dated suffix records the website update date, not the original capture date. All new JPEGs are 1920×1080 except the Hong Kong hand-assistant example (1280×720).
+The dated suffix records the website update date, not the original capture date. All retained JPEGs in this refresh are 1920×1080.
 
 - `app-icon-20261005.webp`: resized to 512×512 from `Assets/_Game/AppIcons/icon_1024.png` (WebP quality 92).
 - `favicon-20261005.png` and `apple-touch-icon-20261005.png`: 64×64 and 180×180 exports from the same game icon.
