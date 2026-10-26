@@ -18,7 +18,9 @@ await mkdir(resolve(dist, ".openai"), { recursive: true });
 await Promise.all([
   cp(resolve(root, "index.html"), resolve(dist, "client", "index.html")),
   cp(resolve(root, "app-ads.txt"), resolve(dist, "client", "app-ads.txt")),
-  cp(resolve(root, "assets", "css", "style.css"), resolve(dist, "client", "assets", "css", "style.css")),
+  cp(resolve(root, "assets", "css"), resolve(dist, "client", "assets", "css"), { recursive: true }),
+  cp(resolve(root, "mahjong-red-dragon"), resolve(dist, "client", "mahjong-red-dragon"), { recursive: true }),
+  cp(resolve(root, "hidden-magnet"), resolve(dist, "client", "hidden-magnet"), { recursive: true }),
   cp(resolve(root, "assets", "js", "main.js"), resolve(dist, "client", "assets", "js", "main.js")),
   cp(resolve(root, "assets", "images"), resolve(dist, "client", "assets", "images"), { recursive: true }),
   cp(resolve(root, ".openai", "hosting.json"), resolve(dist, ".openai", "hosting.json")),
@@ -59,4 +61,4 @@ export default {
 
 await writeFile(resolve(dist, "server", "index.js"), workerSource, "utf8");
 
-console.log("Built Mahjong Red Dragon site into dist/.");
+console.log("Built Kenny Tsang Games site into dist/.");

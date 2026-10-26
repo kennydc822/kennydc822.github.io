@@ -1,8 +1,17 @@
-# 麻將紅中變 Website
+# Kenny Tsang Games
 
-Official landing page for **麻將紅中變 / Mahjong Red Dragon**. The site links to
-the Android game on Google Play and its published
-[privacy policy](https://kennydc822.github.io/mahjong-red-dragon-privacy/).
+Game catalogue for Kenny Tsang, with a separate landing page for each game.
+
+- `/`: short game introductions linking to each game's page.
+- `/mahjong-red-dragon/`: the original Mahjong Red Dragon page, screenshots and downloads.
+- `/hidden-magnet/`: Hidden Magnet introduction; add a verified store link when available.
+- `/hidden-magnet/privacy/`: existing privacy policy, unchanged.
+- `/app-ads.txt`: shared advertising declaration, unchanged.
+
+To add a game, create `<game-slug>/index.html`, add a linked card to `index.html`,
+and include the new directory in `scripts/build.mjs` and `scripts/dev.mjs`.
+The catalogue uses `assets/css/catalog.css`; Mahjong keeps its own stylesheet.
+All shared asset URLs are root-relative so nested game pages work correctly.
 
 ## Local preview
 

@@ -40,10 +40,10 @@ const themeNames = {
   jade: "玉石晨光",
 };
 const themeSources = {
-  original: "assets/images/taiwan-ready-original-20261005r4.jpg",
-  classic: "assets/images/taiwan-ready-classic-20261005r4.jpg",
-  midnight: "assets/images/taiwan-ready-midnight-20261005r4.jpg",
-  jade: "assets/images/taiwan-ready-20261005r2.jpg",
+  original: "/assets/images/taiwan-ready-original-20261005r4.jpg",
+  classic: "/assets/images/taiwan-ready-classic-20261005r4.jpg",
+  midnight: "/assets/images/taiwan-ready-midnight-20261005r4.jpg",
+  jade: "/assets/images/taiwan-ready-20261005r2.jpg",
 };
 
 // Keep the current preview visible until the next screenshot has loaded.

@@ -24,14 +24,23 @@ const server = createServer((request, response) => {
     return;
   }
   const relativePath = requestPath === "/" ? "index.html" : requestPath.replace(/^\/+/, "");
-  const filePath = resolve(root, normalize(relativePath));
+  let filePath = resolve(root, normalize(relativePath));
 
   const publicPath = relativePath === "index.html" || relativePath === "app-ads.txt"
-    || relativePath.startsWith("assets/");
+    || relativePath.startsWith("assets/")
+    || /^(mahjong-red-dragon|hidden-magnet)(\/|$)/.test(relativePath);
   if (!publicPath || relativePath.split(/[\\/]/).some((part) => part.startsWith("."))
     || !filePath.startsWith(`${root}${sep}`)) {
     response.writeHead(403).end("Forbidden");
     return;
+  }
+
+  if (existsSync(filePath) && statSync(filePath).isDirectory()) {
+    if (!requestPath.endsWith("/")) {
+      response.writeHead(301, { location: `${requestPath}/${new URL(request.url, "http://localhost").search}` }).end();
+      return;
+    }
+    filePath = resolve(filePath, "index.html");
   }
 
   if (!existsSync(filePath) || !statSync(filePath).isFile()) {
