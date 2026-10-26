@@ -80,9 +80,9 @@ Existing Unity Editor captures from the Mahjong game project; converted to JPEG 
 - `assets/images/theme-midnight.jpg`: `DesignReferences/AppearanceThemes/2026-09-23/AppliedPreview/AppearanceSettings-midnight-final.png`
 - `assets/images/theme-jade.jpg`: `DesignReferences/AppearanceThemes/2026-09-23/AppliedPreview/AppearanceSettings-jade-final.png`
 
-## Hidden Magnet website — 2026-10-26
+## Magnet Maze website — 2026-10-26
 
-The Hidden Magnet page and catalogue card use actual captures from the local HiddenMagnet Unity project, captured 2026-10-23. Files are copied unchanged; no game UI is fabricated.
+The Magnet Maze page and catalogue card use actual captures from the local HiddenMagnet Unity project, captured 2026-10-23. Files are copied unchanged; no game UI is fabricated.
 
 - `assets/images/hidden-magnet/hidden-maze-20261026.png`: `Captures/sonar-ui-gameplay-v2.png`, active flat/normal level 1, hidden walls and ball.
 - `assets/images/hidden-magnet/maze-revealed-20261026.png`: `Captures/ball-path-playing.png`, completed flat/easy level 1, revealed maze and gold travelled path. Used in the hero and catalogue card, explicitly as a completion view.

@@ -4,7 +4,7 @@ Game catalogue for Kenny Tsang, with a separate landing page for each game.
 
 - `/`: short game introductions linking to each game's page.
 - `/mahjong-red-dragon/`: the original Mahjong Red Dragon page, screenshots and downloads.
-- `/hidden-magnet/`: Hidden Magnet introduction; add a verified store link when available.
+- `/hidden-magnet/`: Magnet Maze introduction; add a verified store link when available.
 - `/hidden-magnet/privacy/`: existing privacy policy, unchanged.
 - `/app-ads.txt`: shared advertising declaration, unchanged.
 
