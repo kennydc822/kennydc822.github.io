@@ -16,6 +16,7 @@ await mkdir(resolve(dist, "server"), { recursive: true });
 await mkdir(resolve(dist, ".openai"), { recursive: true });
 
 await Promise.all([
+  cp(resolve(root, "en"), resolve(dist, "client", "en"), { recursive: true }),
   cp(resolve(root, "index.html"), resolve(dist, "client", "index.html")),
   cp(resolve(root, "app-ads.txt"), resolve(dist, "client", "app-ads.txt")),
   cp(resolve(root, "assets", "css"), resolve(dist, "client", "assets", "css"), { recursive: true }),

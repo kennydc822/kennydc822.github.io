@@ -33,7 +33,8 @@ document.querySelectorAll("[data-year]").forEach((element) => {
 const themeImage = document.querySelector("#theme-preview-image");
 const themeCaption = document.querySelector("#theme-preview-caption");
 const themeChoices = document.querySelectorAll("[data-theme]");
-const themeNames = {
+const isEnglish = document.documentElement.lang === "en";
+const themeNames = isEnglish ? { original: "Original", classic: "Classic Teahouse", midnight: "Midnight Celadon", jade: "Jade Morning" } : {
   original: "原版風格",
   classic: "經典茶樓",
   midnight: "夜海青瓷",
@@ -58,15 +59,15 @@ themeChoices.forEach((button) => {
       if (request !== latestThemeRequest) return;
       themeImage.src = preview.src;
       themeImage.dataset.captureTheme = theme;
-      themeImage.alt = `${themeNames[theme]}：牌桌、牌背及環境的遊戲畫面`;
-      themeCaption.textContent = `${themeNames[theme]} · 牌桌與環境預覽`;
+      themeImage.alt = isEnglish ? `${themeNames[theme]}: game table, tile backs and surroundings` : `${themeNames[theme]}：牌桌、牌背及環境的遊戲畫面`;
+      themeCaption.textContent = isEnglish ? `${themeNames[theme]} · Table and environment preview` : `${themeNames[theme]} · 牌桌與環境預覽`;
       themeChoices.forEach((choice) => {
         choice.setAttribute("aria-pressed", String(choice === button));
       });
     };
     preview.onerror = () => {
       if (request !== latestThemeRequest) return;
-      themeCaption.textContent = "暫時未能載入此主題畫面，請再試一次。";
+      themeCaption.textContent = isEnglish ? "This theme preview could not be loaded. Please try again." : "暫時未能載入此主題畫面，請再試一次。";
     };
     preview.src = themeSources[theme];
   });

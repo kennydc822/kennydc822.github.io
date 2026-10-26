@@ -28,7 +28,7 @@ const server = createServer((request, response) => {
   let filePath = resolve(root, normalize(relativePath));
 
   const publicPath = relativePath === "index.html" || relativePath === "app-ads.txt"
-    || relativePath.startsWith("assets/")
+    || relativePath.startsWith("assets/") || relativePath.startsWith("en/")
     || /^(mahjong-red-dragon|hidden-magnet)(\/|$)/.test(relativePath);
   if (!publicPath || relativePath.split(/[\\/]/).some((part) => part.startsWith("."))
     || !filePath.startsWith(`${root}${sep}`)) {
