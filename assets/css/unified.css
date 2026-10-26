@@ -36,3 +36,7 @@ html { color-scheme: light; }
 
 .unified-site .header-nav { display: flex; align-items: center; gap: 12px; }
 @media(max-width:640px) { .unified-site .wordmark span { display: none; } .unified-site .wordmark { font-size: 18px; } .unified-site .header-nav { gap: 4px; } }
+
+/* Release status is informational, not an interactive control. */
+.unified-site .release-status { display: inline-block; margin: 16px 0 20px; padding: 4px 12px; border: 1px solid var(--red-deep); border-radius: 4px; color: var(--red-deep); font: 600 14px/1.6 var(--sans); }
+.unified-site .game-copy .release-status { margin-bottom: 0; }
