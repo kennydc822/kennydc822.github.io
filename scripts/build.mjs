@@ -22,6 +22,7 @@ await Promise.all([
   cp(resolve(root, "mahjong-red-dragon"), resolve(dist, "client", "mahjong-red-dragon"), { recursive: true }),
   cp(resolve(root, "hidden-magnet"), resolve(dist, "client", "hidden-magnet"), { recursive: true }),
   cp(resolve(root, "assets", "js", "main.js"), resolve(dist, "client", "assets", "js", "main.js")),
+  cp(resolve(root, "assets", "fonts"), resolve(dist, "client", "assets", "fonts"), { recursive: true }),
   cp(resolve(root, "assets", "images"), resolve(dist, "client", "assets", "images"), { recursive: true }),
   cp(resolve(root, ".openai", "hosting.json"), resolve(dist, ".openai", "hosting.json")),
 ]);

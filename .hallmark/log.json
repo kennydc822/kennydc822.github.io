@@ -1,0 +1,27 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "shape": "Workbench",
+  "theme": "Paste-up",
+  "axes": "mid/display-condensed/chromatic-yellow",
+  "hero": "Banner",
+  "nav": "slab",
+  "footer": "colophon",
+  "imagery": "real game captures",
+  "photos": [],
+  "entry": "index.html",
+  "fingerprint": "horizontal heading banner; asymmetrical landscape and portrait game prints; compact colophon",
+  "sections": [
+   "game catalogue",
+   "colophon"
+  ],
+  "signature": "Landscape mahjong print beside portrait maze print",
+  "waived": [
+   "59"
+  ],
+  "prompt": "Use Hallmark to redesign the two-game personal homepage without generic AI styling",
+  "verification": "0 FAIL, 0 REFLEX, 0 WARN; 1 waived spacing; hero and finish reviewers ship",
+  "date": "2026-10-26"
+ }
+]

@@ -6,6 +6,7 @@ const root = resolve(import.meta.dirname, "..");
 const port = Number(process.env.PORT || 4173);
 
 const contentTypes = {
+  ".ttf": "font/ttf",
   ".css": "text/css; charset=utf-8",
   ".html": "text/html; charset=utf-8",
   ".jpg": "image/jpeg",

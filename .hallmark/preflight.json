@@ -1,0 +1,27 @@
+{
+  "scanned": "2026-10-26",
+  "findings": {
+    "framework": "static HTML/CSS; package.json:1",
+    "fonts": "system stack; assets/css/catalog.css:1 before redesign",
+    "palette": "assistant-generated dark catalogue, not a locked brand",
+    "material": "two actual game captures; index.html:36,40 before redesign"
+  },
+  "preserve": [
+    "all game facts",
+    "all 6 source links",
+    "game pages",
+    "real screenshot colours"
+  ],
+  "introduce": [
+    "Paste-up kraft paper",
+    "self-hosted League Gothic and Newsreader Latin subsets; native Traditional Chinese serif fallback",
+    "Workbench game-selection hero"
+  ],
+  "draw": "bafa0a",
+  "swaps": [
+    "Index instead of Counter: no executable game or download on the catalogue",
+    "slab instead of retracting banner: only one navigation destination",
+    "colophon instead of index columns: only two game pages",
+    "no new sections: redesign preserves two-game content"
+  ]
+}

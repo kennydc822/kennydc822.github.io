@@ -1,89 +1,60 @@
-@charset "UTF-8";
-:root {
-  color-scheme: dark;
-  --bg: #111514;
-  --panel: #191e1c;
-  --text: #f1f0e8;
-  --muted: #a5afa7;
-  --line: #323c35;
-  --accent: #d7ed9c;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 24px; }
-body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif; -webkit-font-smoothing: antialiased; }
-a { color: inherit; }
-a:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; }
-.wrap { width: min(1200px, 100%); margin-inline: auto; padding-inline: 48px; }
-h1, h2, h3, p { margin-top: 0; }
-.site-header { display: flex; justify-content: space-between; align-items: center; padding-block: 26px; border-bottom: 1px solid var(--line); }
-.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-size: 15px; font-weight: 650; line-height: 1.35; }
-.brand-mark { display: grid; place-items: center; width: 40px; height: 40px; background: var(--accent); color: var(--bg); font-size: 25px; border-radius: 50%; }
-.brand small { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; font-weight: 400; letter-spacing: 2px; }
-.site-header nav a { font-size: 12px; text-decoration: none; }
-.site-header nav span { color: var(--accent); margin-left: 18px; }
-.intro { padding: 68px 0 56px; }
-.eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 26px; font-size: 10px; font-weight: 600; letter-spacing: 2.5px; color: var(--accent); }
-.eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
-h1 { font-size: clamp(44px, 6.8vw, 84px); letter-spacing: -3px; line-height: 1.22; margin-bottom: 32px; font-weight: 750; }
-.accent { color: var(--accent); }
-.intro-bottom { display: flex; justify-content: space-between; align-items: end; gap: 24px; }
-.lede { color: var(--muted); font-size: 14px; line-height: 1.95; margin: 0; }
-.browse-link { display: flex; align-items: center; gap: 36px; text-decoration: none; white-space: nowrap; border-bottom: 1px solid var(--accent); padding: 10px 0; font-size: 13px; }
-.browse-link span { color: var(--accent); font-size: 22px; }
-.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-top: 1px solid var(--line); padding-top: 22px; margin-bottom: 26px; }
-.section-heading h2 { font-size: 16px; margin: 0; font-weight: 500; }
-.section-heading h2 small { font-size: 9px; color: var(--muted); letter-spacing: 2px; margin-left: 16px; }
-.section-heading > span { color: var(--muted); font-size: 10px; letter-spacing: 2px; }
-.game-grid { display: grid; gap: 26px; }
-.game-card { --card-accent: #f0ca89; display: grid; grid-template-columns: 1.35fr 1fr; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; text-decoration: none; background: var(--panel); transition: border-color .2s, transform .2s; }
-.game-card:hover { border-color: var(--card-accent); transform: translateY(-3px); }
-.magnet-card { --card-accent: #75e6d5; }
-.game-art { position: relative; overflow: hidden; min-height: 370px; }
-.mahjong-art { background: #253026; }
-.mahjong-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.mahjong-art::after { content: ""; position: absolute; inset: 65% 0 0; background: linear-gradient(transparent, #07100ddd); }
-.art-label { position: absolute; left: 24px; bottom: 22px; z-index: 1; color: #f6eee0; font-size: 9px; letter-spacing: 2.3px; }
-.card-copy { display: flex; flex-direction: column; align-items: flex-start; padding: 32px 36px; }
-.card-number { font-size: 12px; color: var(--muted); letter-spacing: 2px; margin-bottom: 26px; }
-.tags { margin-bottom: 12px; color: var(--card-accent); font-size: 10px; letter-spacing: 1.5px; }
-.card-copy h3 { margin-bottom: 20px; font-size: clamp(27px, 3vw, 35px); font-weight: 650; line-height: 1.3; letter-spacing: -.5px; }
-.card-copy h3 small { display: block; color: var(--muted); font-weight: 400; font-size: 12px; letter-spacing: .5px; margin-top: 10px; }
-.card-copy > p:not(.tags) { color: var(--muted); font-size: 13px; line-height: 1.9; margin-bottom: 24px; }
-.card-cta { display: flex; justify-content: space-between; align-items: center; gap: 30px; width: 100%; border-top: 1px solid var(--line); padding-top: 16px; margin-top: auto; font-size: 12px; }
-.card-cta span { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid var(--card-accent); border-radius: 50%; color: var(--card-accent); font-size: 18px; transition: background .2s, color .2s; }
-.game-card:hover .card-cta span { background: var(--card-accent); color: var(--bg); }
-.magnet-game-art { display: flex; align-items: center; justify-content: center; background: radial-gradient(ellipse at center, #15353e, #061522 75%); }
-.magnet-game-art img { display: block; width: auto; height: 380px; max-width: 100%; object-fit: contain; margin: 18px 0; border: 1px solid #37515b; border-radius: 12px; box-shadow: 0 15px 45px #0005; }
-.magnet-game-art .art-label { color: #75e6d5; writing-mode: vertical-rl; left: 24px; bottom: 28px; }
-.closing-note { padding: 52px 0; margin: 0; font-size: 15px; color: var(--text); }
-.closing-note span { margin-left: 12px; color: var(--muted); font-size: 13px; }
-.site-footer { border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; padding-block: 24px; font-size: 10px; color: var(--muted); }
-.site-footer p { margin: 0; }
-.skip-link { position: absolute; top: -100px; left: 20px; background: var(--accent); color: var(--bg); padding: 12px; z-index: 10; }
-.skip-link:focus { top: 10px; }
-@media (max-width: 760px) {
-  .wrap { padding-inline: 22px; }
-  .site-header { padding-block: 20px; }
-  .intro { padding: 45px 0 38px; }
-  h1 { letter-spacing: -1.5px; }
-  .eyebrow { font-size: 9px; letter-spacing: 1.5px; }
-  .intro-bottom { flex-direction: column; align-items: flex-start; gap: 18px; }
-  .lede { font-size: 13px; }
-  .browse-link { font-size: 12px; }
-  .section-heading h2 small { display: none; }
-  .game-card { grid-template-columns: 1fr; }
-  .game-art { min-height: 0; aspect-ratio: 4 / 3; }
-  .magnet-game-art img { height: 90%; margin: 0; }
-  .magnet-game-art .art-label { font-size: 8px; left: 18px; bottom: 20px; }
-  .card-copy { padding: 24px; }
-  .card-number { margin-bottom: 18px; }
-  .card-copy h3 { font-size: 29px; }
-  .closing-note { padding-block: 34px; }
-  .closing-note span { display: block; margin: 6px 0 0; }
-  .site-footer { flex-direction: column; gap: 5px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .game-card, .card-cta span { transition: none; }
-  .game-card:hover { transform: none; }
-}
+/* Hallmark · shape: Workbench · genre: playful · theme: Paste-up (deal 3/3, seed personal-indie-game-catalogue-1548·958e6e0e·2026-10-26·r0) · redesign: full
+ * hero: Banner · nav: slab · footer: colophon · imagery: real game captures · signature: landscape mahjong print beside portrait maze print, linked directly to the games · pasteup: kraft
+ * axes: mid/display-condensed/chromatic-yellow · posture: committed · job: try · draw: bafa0a · contrast: render checked · fold: compact banner and game index · hero-review: ship, artwork reduced · finish-review: subagent ship, no open findings · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S5 R4 V5 · weakest: R, removed decorative numbering and separate marketing hero; game selection is the page */
+/* Hallmark · dismissed 77 · the existing catalogue has only two games; extra sections would duplicate their descriptions or invent new content */
+/* Hallmark · dismissed 25 · closing paragraphs are single short sentences, not long reading passages */
+/* Hallmark · dismissed 19 · All rights reserved is retained verbatim as existing copyright text during redesign */
+/* Hallmark · reworded "玩一局， 發現新樂趣。" to "遊戲作品" · 54 merges the plain subject into the heading; 19 removes a generic promise */
+/* Hallmark · reworded "遊戲作品 THE COLLECTION" to "兩款獨立遊戲" · 67 removes redundant tracked-capital labels */
+/* Hallmark · dropped "KENNY TSANG / INDEPENDENT GAMES", "02 / GAMES", "01", "02" · 54 and 66 remove decorative labels; two actual games remain */
+/* Hallmark · dropped "Mahjong Red Dragon", "Hidden Magnet" · duplicated heading subtitles become captions on the same game images */
+/* Hallmark · waive 44c · Banner posture above the Workbench game prints · the catalogue introduces both games with a horizontal heading strip instead of pairing a marketing headline with one illustration */
+/* Hallmark · waive 59 · dense Workbench separated by a footer rule · the two-game catalogue retains a compact colophon rather than expanding its short personal sign-off into another section */
+@import url("./tokens.css");
+@import url("./base.css");
+@font-face { font-family: "League Gothic"; src: url("../fonts/league-gothic-0.ttf") format("truetype"); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: "Newsreader"; src: url("../fonts/newsreader-0.ttf") format("truetype"); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: "Newsreader"; src: url("../fonts/newsreader-1.ttf") format("truetype"); font-style: normal; font-weight: 500; font-display: swap; }
+body { font-size: 18px; }
+a { -webkit-tap-highlight-color: var(--color-accent); }
+a:hover { text-decoration-thickness: 2px; }
+a:active { transform: translateY(1px); }
+a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 6px; }
+.site-header { display: flex; align-items: center; justify-content: space-between; min-height: 80px; background: var(--color-paper-3); color: var(--color-ink); box-shadow: var(--shadow-card); }
+.brand { font-family: var(--font-display); font-size: 40px; text-decoration: none; line-height: 1.1; }
+.site-header nav a { display: inline-flex; align-items: center; min-height: 48px; white-space: nowrap; font-size: var(--text-md); }
+.catalogue { padding-block: var(--space-xl) var(--space-2xl); }
+.intro { display: flex; justify-content: space-between; align-items: center; gap: var(--gap-columns); margin-bottom: var(--space-xl); }
+h1 { font-family: var(--font-cjk); font-size: clamp(40px, 4.5vw, 64px); line-height: 1.2; font-weight: 700; letter-spacing: 0; }
+.intro-copy { display: flex; align-items: center; gap: var(--gap-columns); max-width: 60%; }
+.lead { font-size: 18px; line-height: 1.6; max-width: 28ch; }
+.browse-link { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; min-height: 48px; padding-inline: var(--space-lg); background: var(--color-accent); color: var(--color-accent-ink); box-shadow: var(--shadow-control); text-decoration: none; white-space: nowrap; font-size: var(--text-md); transition: transform var(--dur-micro) var(--ease-out); }
+.browse-link:hover { transform: translate(1px, 1px); }
+.browse-link:active { transform: translate(4px, 4px); }
+.workbench { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap-columns); align-items: start; }
+.game-link { display: block; min-width: 0; text-decoration: none; }
+.print { margin: 0; padding: var(--space-sm); background: var(--color-paper-3); color: var(--color-ink); box-shadow: var(--shadow-sheet); }
+.print span { display: block; padding-top: var(--space-sm); font-size: var(--text-sm); }
+.mahjong-print { transform: rotate(-1deg); margin-top: var(--space-lg); max-width: 540px; }
+.mahjong-print img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
+.magnet { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap-columns); align-items: center; }
+.magnet-print { transform: rotate(1deg); max-width: 240px; justify-self: center; }
+.magnet-print img { width: 100%; height: auto; }
+.game-copy { padding-top: var(--space-lg); }
+h3 { font-family: var(--font-cjk); font-size: 36px; font-weight: 700; line-height: 1.2; letter-spacing: 0; }
+.category { font-size: var(--text-sm); margin-block: var(--space-xs) var(--space-md); }
+.game-copy > p:not(.category) { font-size: var(--text-md); line-height: 1.65; }
+.game-cta { display: inline-flex; align-items: center; min-height: 48px; margin-top: var(--space-sm); font-size: var(--text-md); text-decoration: underline; text-underline-offset: .2em; }
+.game-link:hover .game-cta { text-decoration-thickness: 3px; }
+.game-link:active { transform: translateY(1px); }
+.closing { display: flex; justify-content: space-between; gap: var(--gap-columns); padding-block: var(--space-xl); border-top: 1px solid var(--color-rule); }
+.closing p { font-size: var(--text-md); max-width: 38ch; }
+.footer-meta { display: flex; justify-content: space-between; gap: var(--gap-columns); padding-block: var(--space-lg); font-size: var(--text-sm); }
+.skip-link { position: absolute; left: var(--space-md); top: calc(-1 * var(--space-3xl)); z-index: var(--z-toast); padding: var(--space-sm) var(--space-md); background: var(--color-paper-3); color: var(--color-ink); }
+.skip-link:focus-visible { top: var(--space-md); }
+
+@media (max-width: 70rem) { .magnet { grid-template-columns: minmax(0, 1fr); } .magnet-print { max-width: 200px; margin-inline: auto; } .magnet-print img { max-height: 340px; object-fit: contain; } .intro-copy { max-width: 65%; } }
+@media (max-width: 60rem) { .hero { min-height: auto; } .intro { align-items: start; } .intro-copy { display: block; } .browse-link { margin-top: var(--space-lg); } .print { transform: none; } .mahjong-print { margin-top: 0; } }
+@media (max-width: 40rem) { .site-header { min-height: 72px; } .brand { font-size: 36px; } .hero { padding-top: var(--space-xl); } .intro { display: block; margin-bottom: var(--space-xl); } .intro-copy { max-width: none; margin-top: var(--space-lg); } .lead { max-width: 28ch; } .workbench { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-2xl); } h3 { font-size: 32px; } .magnet { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-md); align-items: start; } .magnet-print { max-width: none; } .magnet .game-copy { padding-top: 0; } .magnet h3 { font-size: 28px; } .closing, .footer-meta { flex-direction: column; gap: var(--space-md); } }
+@media (prefers-reduced-motion: reduce) { .browse-link { transition: none; } a:active, .browse-link:hover, .browse-link:active, .game-link:active { transform: none; } }
