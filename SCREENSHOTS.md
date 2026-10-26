@@ -79,3 +79,13 @@ Existing Unity Editor captures from the Mahjong game project; converted to JPEG 
 - `assets/images/theme-classic.jpg`: `DesignReferences/AppearanceThemes/2026-09-23/AppliedPreview/AppearanceSettings-classic-final.png`
 - `assets/images/theme-midnight.jpg`: `DesignReferences/AppearanceThemes/2026-09-23/AppliedPreview/AppearanceSettings-midnight-final.png`
 - `assets/images/theme-jade.jpg`: `DesignReferences/AppearanceThemes/2026-09-23/AppliedPreview/AppearanceSettings-jade-final.png`
+
+## Hidden Magnet website — 2026-10-26
+
+The Hidden Magnet page and catalogue card use actual captures from the local HiddenMagnet Unity project, captured 2026-10-23. Files are copied unchanged; no game UI is fabricated.
+
+- `assets/images/hidden-magnet/hidden-maze-20261026.png`: `Captures/sonar-ui-gameplay-v2.png`, active flat/normal level 1, hidden walls and ball.
+- `assets/images/hidden-magnet/maze-revealed-20261026.png`: `Captures/ball-path-playing.png`, completed flat/easy level 1, revealed maze and gold travelled path. Used in the hero and catalogue card, explicitly as a completion view.
+- `assets/images/hidden-magnet/dual-state-20261026.png`: `Captures/ball-path-dual-state.png`, completed dual-state level 1 in B state.
+
+Copy checked against README.md, Documentation/DualState-Mode.md, CampaignMenu.cs, ModeCarousel.cs, TutorialLesson.cs and SonarTheme.cs in the game project. Website colours follow the current Deep Sonar palette. Old generated ocean/chest art is not used because project documentation confirms it is no longer displayed on Home. These are development-project captures, not a claim about a released store version. No verified download URL is available.
