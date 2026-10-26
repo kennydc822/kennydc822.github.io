@@ -1,60 +1,37 @@
-/* Hallmark · shape: Workbench · genre: playful · theme: Paste-up (deal 3/3, seed personal-indie-game-catalogue-1548·958e6e0e·2026-10-26·r0) · redesign: full
- * hero: Banner · nav: slab · footer: colophon · imagery: real game captures · signature: landscape mahjong print beside portrait maze print, linked directly to the games · pasteup: kraft
- * axes: mid/display-condensed/chromatic-yellow · posture: committed · job: try · draw: bafa0a · contrast: render checked · fold: compact banner and game index · hero-review: ship, artwork reduced · finish-review: subagent ship, no open findings · v2.0.0 */
-/* Hallmark · pre-emit critique: P4 H4 E4 S5 R4 V5 · weakest: R, removed decorative numbering and separate marketing hero; game selection is the page */
-/* Hallmark · dismissed 77 · the existing catalogue has only two games; extra sections would duplicate their descriptions or invent new content */
-/* Hallmark · dismissed 25 · closing paragraphs are single short sentences, not long reading passages */
-/* Hallmark · dismissed 19 · All rights reserved is retained verbatim as existing copyright text during redesign */
-/* Hallmark · reworded "玩一局， 發現新樂趣。" to "遊戲作品" · 54 merges the plain subject into the heading; 19 removes a generic promise */
-/* Hallmark · reworded "遊戲作品 THE COLLECTION" to "兩款獨立遊戲" · 67 removes redundant tracked-capital labels */
-/* Hallmark · dropped "KENNY TSANG / INDEPENDENT GAMES", "02 / GAMES", "01", "02" · 54 and 66 remove decorative labels; two actual games remain */
-/* Hallmark · dropped "Mahjong Red Dragon", "Hidden Magnet" · duplicated heading subtitles become captions on the same game images */
-/* Hallmark · waive 44c · Banner posture above the Workbench game prints · the catalogue introduces both games with a horizontal heading strip instead of pairing a marketing headline with one illustration */
-/* Hallmark · waive 59 · dense Workbench separated by a footer rule · the two-game catalogue retains a compact colophon rather than expanding its short personal sign-off into another section */
-@import url("./tokens.css");
-@import url("./base.css");
-@font-face { font-family: "League Gothic"; src: url("../fonts/league-gothic-0.ttf") format("truetype"); font-style: normal; font-weight: 400; font-display: swap; }
-@font-face { font-family: "Newsreader"; src: url("../fonts/newsreader-0.ttf") format("truetype"); font-style: normal; font-weight: 400; font-display: swap; }
-@font-face { font-family: "Newsreader"; src: url("../fonts/newsreader-1.ttf") format("truetype"); font-style: normal; font-weight: 500; font-display: swap; }
-body { font-size: 18px; }
-a { -webkit-tap-highlight-color: var(--color-accent); }
-a:hover { text-decoration-thickness: 2px; }
-a:active { transform: translateY(1px); }
-a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 6px; }
-.site-header { display: flex; align-items: center; justify-content: space-between; min-height: 80px; background: var(--color-paper-3); color: var(--color-ink); box-shadow: var(--shadow-card); }
-.brand { font-family: var(--font-display); font-size: 40px; text-decoration: none; line-height: 1.1; }
-.site-header nav a { display: inline-flex; align-items: center; min-height: 48px; white-space: nowrap; font-size: var(--text-md); }
-.catalogue { padding-block: var(--space-xl) var(--space-2xl); }
-.intro { display: flex; justify-content: space-between; align-items: center; gap: var(--gap-columns); margin-bottom: var(--space-xl); }
-h1 { font-family: var(--font-cjk); font-size: clamp(40px, 4.5vw, 64px); line-height: 1.2; font-weight: 700; letter-spacing: 0; }
-.intro-copy { display: flex; align-items: center; gap: var(--gap-columns); max-width: 60%; }
-.lead { font-size: 18px; line-height: 1.6; max-width: 28ch; }
-.browse-link { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; min-height: 48px; padding-inline: var(--space-lg); background: var(--color-accent); color: var(--color-accent-ink); box-shadow: var(--shadow-control); text-decoration: none; white-space: nowrap; font-size: var(--text-md); transition: transform var(--dur-micro) var(--ease-out); }
-.browse-link:hover { transform: translate(1px, 1px); }
-.browse-link:active { transform: translate(4px, 4px); }
-.workbench { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap-columns); align-items: start; }
-.game-link { display: block; min-width: 0; text-decoration: none; }
-.print { margin: 0; padding: var(--space-sm); background: var(--color-paper-3); color: var(--color-ink); box-shadow: var(--shadow-sheet); }
-.print span { display: block; padding-top: var(--space-sm); font-size: var(--text-sm); }
-.mahjong-print { transform: rotate(-1deg); margin-top: var(--space-lg); max-width: 540px; }
-.mahjong-print img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
-.magnet { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--gap-columns); align-items: center; }
-.magnet-print { transform: rotate(1deg); max-width: 240px; justify-self: center; }
-.magnet-print img { width: 100%; height: auto; }
-.game-copy { padding-top: var(--space-lg); }
-h3 { font-family: var(--font-cjk); font-size: 36px; font-weight: 700; line-height: 1.2; letter-spacing: 0; }
-.category { font-size: var(--text-sm); margin-block: var(--space-xs) var(--space-md); }
-.game-copy > p:not(.category) { font-size: var(--text-md); line-height: 1.65; }
-.game-cta { display: inline-flex; align-items: center; min-height: 48px; margin-top: var(--space-sm); font-size: var(--text-md); text-decoration: underline; text-underline-offset: .2em; }
-.game-link:hover .game-cta { text-decoration-thickness: 3px; }
-.game-link:active { transform: translateY(1px); }
-.closing { display: flex; justify-content: space-between; gap: var(--gap-columns); padding-block: var(--space-xl); border-top: 1px solid var(--color-rule); }
-.closing p { font-size: var(--text-md); max-width: 38ch; }
-.footer-meta { display: flex; justify-content: space-between; gap: var(--gap-columns); padding-block: var(--space-lg); font-size: var(--text-sm); }
-.skip-link { position: absolute; left: var(--space-md); top: calc(-1 * var(--space-3xl)); z-index: var(--z-toast); padding: var(--space-sm) var(--space-md); background: var(--color-paper-3); color: var(--color-ink); }
-.skip-link:focus-visible { top: var(--space-md); }
-
-@media (max-width: 70rem) { .magnet { grid-template-columns: minmax(0, 1fr); } .magnet-print { max-width: 200px; margin-inline: auto; } .magnet-print img { max-height: 340px; object-fit: contain; } .intro-copy { max-width: 65%; } }
-@media (max-width: 60rem) { .hero { min-height: auto; } .intro { align-items: start; } .intro-copy { display: block; } .browse-link { margin-top: var(--space-lg); } .print { transform: none; } .mahjong-print { margin-top: 0; } }
-@media (max-width: 40rem) { .site-header { min-height: 72px; } .brand { font-size: 36px; } .hero { padding-top: var(--space-xl); } .intro { display: block; margin-bottom: var(--space-xl); } .intro-copy { max-width: none; margin-top: var(--space-lg); } .lead { max-width: 28ch; } .workbench { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-2xl); } h3 { font-size: 32px; } .magnet { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-md); align-items: start; } .magnet-print { max-width: none; } .magnet .game-copy { padding-top: 0; } .magnet h3 { font-size: 28px; } .closing, .footer-meta { flex-direction: column; gap: var(--space-md); } }
-@media (prefers-reduced-motion: reduce) { .browse-link { transition: none; } a:active, .browse-link:hover, .browse-link:active, .game-link:active { transform: none; } }
+/* Catalogue layout; the visual system is shared with Mahjong Red Dragon. */
+* { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { scroll-padding-top: 100px; }
+body { margin: 0; font: 16px/1.7 var(--sans); color: var(--ink); background: var(--paper); }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+h1,h2,h3,p { margin: 0; }
+h1,h2,h3 { font-family: var(--display); line-height: 1.2; overflow-wrap: break-word; min-width: 0; }
+a:focus-visible { outline: 3px solid var(--gold); outline-offset: 5px; }
+.container { max-width: 1320px; margin-inline: auto; padding-inline: 48px; }
+.site-header { display: flex; align-items: center; justify-content: space-between; min-height: 84px; gap: 24px; }
+.brand { font-family: var(--display); font-size: 24px; font-weight: 700; letter-spacing: .03em; }
+.catalogue { padding-block: 80px 100px; }
+.intro { display: flex; justify-content: space-between; align-items: center; gap: 48px; margin-bottom: 64px; }
+h1 { font-size: clamp(44px,5vw,72px); letter-spacing: -.035em; }
+.intro-copy { max-width: 540px; }
+.lead { color: var(--copy-muted); font-size: 18px; max-width: 44ch; }
+.browse-link { margin-top: 24px; }
+.workbench { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px; align-items: stretch; }
+.game-link { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--line-light); background: var(--paper-bright); }
+.print { margin: 0; padding: 24px; background: var(--jade-deep); color: var(--paper); min-height: 360px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 16px; }
+.print img { max-height: 300px; width: 100%; object-fit: contain; }
+.print span { font-size: 13px; color: var(--gold); }
+.game-copy { padding: 32px; flex: 1; }
+h3 { font-size: clamp(28px,3vw,36px); }
+.category { color: var(--red-deep); font-size: 14px; margin-block: 12px 20px; }
+.game-copy > p:not(.category) { color: var(--copy-muted); }
+.game-cta { display: inline-flex; align-items: center; min-height: 44px; margin-top: 24px; color: var(--jade-deep); border-bottom: 1px solid var(--jade); font-weight: 700; }
+.game-link:hover .game-cta { color: var(--red-deep); border-color: var(--red-deep); }
+.closing { display: flex; justify-content: space-between; gap: 32px; padding-block: 44px; }
+.closing p { max-width: 48ch; }
+.footer-meta { display: flex; justify-content: space-between; gap: 24px; padding-block: 24px; font-size: 13px; border-top: 1px solid var(--line-dark); }
+.skip-link { position: fixed; top: 12px; left: 12px; z-index: 1000; padding: 12px 16px; background: var(--paper-bright); color: var(--ink); transform: translateY(-150%); }
+.skip-link:focus { transform: none; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media(max-width:760px) { .container { padding-inline: 24px; } .intro { display: block; margin-bottom: 40px; } .intro-copy { margin-top: 24px; } .catalogue { padding-block: 48px 64px; } .workbench { grid-template-columns: minmax(0,1fr); } .print { min-height: 0; padding: 20px; } .print img { max-height: 320px; } .game-copy { padding: 24px; } .closing,.footer-meta { flex-direction: column; gap: 16px; } }

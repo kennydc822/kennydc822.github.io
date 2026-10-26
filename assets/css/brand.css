@@ -1,0 +1,18 @@
+/* Shared visual tokens from the Mahjong Red Dragon page. */
+:root {
+  --ink: #170d08;
+  --ink-soft: #2a1710;
+  --paper: #f4ead7;
+  --paper-bright: #fff8e9;
+  --red: #c83a2f;
+  --red-deep: #8f201d;
+  --jade: #1c624b;
+  --jade-deep: #0d362b;
+  --gold: #d5ad67;
+  --muted: #a99985;
+  --line-dark: rgba(255, 248, 233, 0.16);
+  --line-light: rgba(23, 13, 8, 0.16);
+  --shadow: 0 28px 70px rgba(5, 2, 1, 0.35);
+  --display: "Noto Serif TC", "Songti TC", "PMingLiU", "Times New Roman", serif;
+  --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+}

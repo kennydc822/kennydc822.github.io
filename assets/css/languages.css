@@ -6,8 +6,6 @@
 .header-tools { display: flex; align-items: center; justify-content: end; gap: 12px; }
 .header .wordmark { margin-right: auto; }
 .header { gap: 16px; flex-wrap: wrap; }
-html:lang(en) { --font-cjk: "Newsreader", Georgia, serif; }
-html:lang(en) .catalogue h3 { font-size: clamp(28px, 2.5vw, 36px); }
 html:lang(en) .game-wordmark { display: none; }
 .english-game-title { display: block; font-size: clamp(48px, 6vw, 88px); line-height: 1.05; overflow-wrap: break-word; }
 html:lang(en) .site-nav { gap: 14px; }
@@ -17,7 +15,4 @@ html:lang(en) .site-nav { gap: 14px; }
   .site-header.container { flex-wrap: wrap; gap: 8px; padding-block: 12px; }
   .header-tools { gap: 4px; }
   [data-header] .header-cta { display: none; }
-  html:lang(en) .catalogue .magnet { grid-template-columns: minmax(0, 1fr); }
-  html:lang(en) .catalogue .magnet-print { max-width: 230px; }
-  html:lang(en) .catalogue .magnet .game-copy { padding-top: 24px; }
 }

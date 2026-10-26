@@ -1,0 +1,38 @@
+/* Site-wide presentation derived from the Mahjong Red Dragon page. */
+:root { --copy-muted: #665743; --bg: var(--paper); --panel: var(--paper-bright); --text: var(--ink); --mint: var(--jade); --muted: var(--copy-muted); --line: var(--line-light); }
+html { color-scheme: light; }
+.unified-site { font-family: var(--sans); color: var(--ink); background: var(--paper); }
+.unified-site h1,.unified-site h2,.unified-site h3 { font-family: var(--display); letter-spacing: -.035em; }
+.unified-site .site-header,.unified-site .header { max-width: none; margin: 0; padding: 18px max(24px,calc((100% - 1224px)/2)); min-height: 84px; background: var(--ink); color: var(--paper); border-bottom: 1px solid var(--line-dark); }
+.unified-site .wordmark { font-family: var(--display); font-size: 20px; font-weight: 700; }
+.unified-site .wordmark span,.unified-site .back { color: var(--paper); }
+.unified-site .catalogue,.unified-site .hero { background: radial-gradient(circle at 77% 46%,rgba(28,98,75,.13),transparent 34%),linear-gradient(135deg,#f8f4e8,#eee5d2); }
+.unified-site .browse-link,.unified-site .button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 12px 24px; border: 1px solid var(--jade-deep); border-radius: 4px; background: var(--jade-deep); color: var(--paper-bright); box-shadow: none; font-family: var(--sans); font-size: 16px; font-weight: 700; text-decoration: none; }
+.unified-site .browse-link:hover,.unified-site .button:hover { background: var(--jade); border-color: var(--jade); }
+.unified-site .site-footer,.unified-site .footer { background: var(--ink); color: var(--paper); }
+.unified-site .footer { max-width: none; padding-inline: max(24px,calc((100% - 1080px)/2)); border-color: var(--line-dark); }
+.unified-site .hero.wrap { max-width: none; padding-inline: max(24px,calc((100% - 1080px)/2)); }
+.unified-site .hero-screen img { border: 1px solid var(--line-light); border-radius: 4px; box-shadow: var(--shadow); }
+.unified-site .hero-screen figcaption { margin-top: 24px; }
+.unified-site .eyebrow,.unified-site .number { color: var(--red-deep); }
+.unified-site .hero-note,.unified-site .lede,.unified-site .muted,.unified-site .hero-screen figcaption { color: var(--copy-muted); }
+.unified-site .mode-section { background: var(--ink-soft); color: var(--paper); }
+.unified-site .mode-section .section-heading>p,.unified-site .mode-section .modes p { color: #c6b9a6; }
+.unified-site .mode-section .eyebrow,.unified-site .mode-section .number,.unified-site .mode-section .badge { color: var(--gold); }
+.unified-site .mode-section .modes article { background: var(--ink); border-color: var(--line-dark); border-radius: 4px; }
+.unified-site .mode-section .modes h3,.unified-site .mode-section .modes .mode-subtitle { color: var(--paper); }
+.unified-site .mode-section .badge { border-color: var(--line-dark); }
+.unified-site .daily-side { background: var(--paper-bright); border-radius: 4px; }
+.unified-site .screenshots img { border-radius: 4px; box-shadow: 0 18px 32px rgba(73,45,26,.12); }
+.unified-site .steps p,.unified-site .modes p,.unified-site .daily p,.unified-site .info p { font-size: 16px; }
+.unified-site .screenshots figcaption span,.unified-site .hero-screen figcaption,.unified-site .tip,.unified-site .muted { font-size: 14px; }
+.unified-site .dot { background: var(--red); }
+.privacy-unified { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.8 var(--sans); }
+.privacy-unified h1,.privacy-unified h2 { font-family: var(--display); }
+.privacy-unified a { color: var(--jade-deep); }
+.privacy-unified small { color: var(--copy-muted); }
+.privacy-unified section { border-color: var(--line-light); }
+@media(max-width:640px) { .unified-site .site-header,.unified-site .header { flex-wrap: wrap; gap: 12px; padding: 16px 24px; } .unified-site .brand { font-size: 22px; } .unified-site .hero.wrap { padding-block: 48px; } }
+
+.unified-site .header-nav { display: flex; align-items: center; gap: 12px; }
+@media(max-width:640px) { .unified-site .wordmark span { display: none; } .unified-site .wordmark { font-size: 18px; } .unified-site .header-nav { gap: 4px; } }
